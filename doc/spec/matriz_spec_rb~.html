@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>matriz_spec.rb~ - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../Practica9_gemspec.html">Practica9.gemspec</a>
+  
+    <li class="file"><a href="../Practica9_gemspec~.html">Practica9.gemspec~</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../README_md~.html">README.md~</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../Rakefile~.html">Rakefile~</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../lib/Practica9_rb~.html">Practica9.rb~</a>
+  
+    <li class="file"><a href="../lib/fraccion_rb~.html">fraccion.rb~</a>
+  
+    <li class="file"><a href="../lib/matriz_rb~.html">matriz.rb~</a>
+  
+    <li class="file"><a href="../lib/matrizdensa_rb~.html">matrizdensa.rb~</a>
+  
+    <li class="file"><a href="../lib/matrizdispersa_rb~.html">matrizdispersa.rb~</a>
+  
+    <li class="file"><a href="../spec/Practica9_spec_rb~.html">Practica9_spec.rb~</a>
+  
+    <li class="file"><a href="../spec/matriz_spec_rb~.html">matriz_spec.rb~</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Matriz.html">Matriz</a>
+  
+    <li><a href="../Matrizdensa.html">Matrizdensa</a>
+  
+    <li><a href="../Matrizdispersa.html">Matrizdispersa</a>
+  
+    <li><a href="../Practica9.html">Practica9</a>
+  
+    <li><a href="../Racional.html">Racional</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>require &#39;matriz.rb&#39; matriz = <a
+href="../Matriz.html#method-c-new">Matriz.new</a>(2,2) matriz2 = <a
+href="../Matriz.html#method-c-new">Matriz.new</a>(2,2) matriz3 = <a
+href="../Matriz.html#method-c-new">Matriz.new</a>(2, 2) f1 = <a
+href="../Racional.html#method-c-new">Racional.new</a>(1.0,2.0) f2 = <a
+href="../Racional.html#method-c-new">Racional.new</a>(2.0,3.0) f3 = <a
+href="../Racional.html#method-c-new">Racional.new</a>(5.0,4.0) describe <a
+href="../Matriz.html">Matriz</a> do</p>
+
+<pre>describe &quot;Compare&quot; do
+
+  it &quot;la matriz deberia ser una matriz 3x3 rellenada a 0&quot; do
+  matriz.setValue(0, 0, f1)
+  matriz.setValue(0, 1, f1)
+  matriz.setValue(1, 0, f1)
+  matriz.setValue(1, 1, f1)
+  matriz2.setValue(0, 0, f2)
+  matriz2.setValue(0, 1, f2)
+  matriz2.setValue(1, 0, f2)
+  matriz2.setValue(1, 1, f2)
+  matriz3.setValue(0, 0, f3)
+  matriz3.setValue(0, 1, f3)
+  matriz3.setValue(1, 0, f3)
+  matriz3.setValue(1, 1, f3)
+
+   end
+
+ it &quot;la suma de la matriz deberia ser 7/6&quot; do
+
+  (matriz+matriz2).should equal(1)
+
+ end
+
+    it &quot;la resta de la matriz deberia ser -1/6&quot; do
+
+  (matriz-matriz2).should equal(1)
+
+ end
+
+   it &quot;la multiplicacion de la matriz deberia ser 5/3&quot; do
+
+  (matriz*matriz2).should equal(1)
+
+ end
+
+end</pre>
+
+<p>end</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
